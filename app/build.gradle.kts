@@ -1,7 +1,3 @@
-import Dependencies.AndroidX
-import Dependencies.Kotlin
-import Dependencies.Test
-
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -39,16 +35,11 @@ android {
 }
 
 dependencies {
-    implementation(AndroidX.CoreKtx)
-    implementation(AndroidX.AppCompat)
-    implementation(AndroidX.Material)
-    implementation(AndroidX.ConstraintLayout)
+    implementation(deps.bundles.androidx)
+    implementation(deps.bundles.kotlin)
 
-    implementation(Kotlin.Stdlib)
-    implementation(Kotlin.Coroutines)
+    testImplementation(deps.test.junit.core)
 
-    testImplementation(Test.Junit)
-
-    androidTestImplementation(Test.JunitExt)
-    androidTestImplementation(Test.EspressoCore)
+    androidTestImplementation(deps.test.junit.ext)
+    androidTestImplementation(deps.test.espresso)
 }
