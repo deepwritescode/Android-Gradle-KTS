@@ -90,4 +90,4 @@ lint/reports/
 # Android Profiling
 *.hprof
 
-.DS_Store
+*.DS_Store
