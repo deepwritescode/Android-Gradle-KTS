@@ -19,7 +19,6 @@ dependencyResolutionManagement {
                 .to("androidx.core:core-ktx:1.7.0")
             alias("androidx-material")
                 .to("com.google.android.material:material:1.4.0")
-
             // bundle for androidX dependencies
             bundle(
                 "androidx",
@@ -31,10 +30,19 @@ dependencyResolutionManagement {
                 )
             )
 
+            // Gradle configuration
+            version("gradle", "7.1.0-beta04")
+            alias("gradle-buildtools")
+                .to("com.android.tools.build", "gradle")
+                .versionRef("gradle")
+
             // dependencies for kotlin
             version("kotlin", "1.6.0")
             alias("kotlin-stdlib")
                 .to("org.jetbrains.kotlin", "kotlin-stdlib-jdk8")
+                .versionRef("kotlin")
+            alias("kotlin-gradle-plugin")
+                .to("org.jetbrains.kotlin", "kotlin-gradle-plugin")
                 .versionRef("kotlin")
             alias("kotlin-coroutines")
                 .to("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
