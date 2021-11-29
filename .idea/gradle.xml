@@ -4,14 +4,33 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/android-project-coniguration-plugin" name="android-project-coniguration-plugin">
+                <projects>
+                  <project path="$PROJECT_DIR$/android-project-coniguration-plugin" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android-project-config" />
+            <option value="$PROJECT_DIR$/android-project-config/android-project-config" />
+            <option value="$PROJECT_DIR$/android-project-config/android-project-config/android-project-config" />
+            <option value="$PROJECT_DIR$/android-project-config/android-project-config/android-project-config/android-project-config" />
+            <option value="$PROJECT_DIR$/android-project-config/android-project-config/android-project-config/android-project-config/android-project-config" />
+            <option value="$PROJECT_DIR$/android-project-config/android-project-config/android-project-config/android-project-config/android-project-config/android-project-config" />
+            <option value="$PROJECT_DIR$/android-project-config/android-project-config/android-project-config/android-project-config/android-project-config/android-project-config/projectconfiguration" />
+            <option value="$PROJECT_DIR$/android-project-coniguration-plugin" />
+            <option value="$PROJECT_DIR$/androidprojectconfiguration" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/buildSrc" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

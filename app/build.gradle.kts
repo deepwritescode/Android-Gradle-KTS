@@ -1,23 +1,25 @@
-import Dependencies.AndroidX
-import Dependencies.Kotlin
-import Dependencies.Test
+import com.shalan.apc.AndroidProjectConfig
+import com.shalan.apc.Dependencies.AndroidX
+import com.shalan.apc.Dependencies.Kotlin
+import com.shalan.apc.Dependencies.Test
 
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("com.shalan.androidprojectconfig")
 }
 
 android {
-    compileSdk = Config.compileSdkVersion
+    compileSdk = AndroidProjectConfig.COMPILE_SDK_VERSION
 
     defaultConfig {
-        applicationId = Config.applicationId
-        minSdk = Config.minSdkVersion
-        targetSdk = Config.targetSdkVersion
-        versionCode = Config.versionCode
-        versionName = Config.versionName
+        applicationId = AndroidProjectConfig.APPLICATION_ID
+        minSdk = AndroidProjectConfig.MIN_SDK_VERSION
+        targetSdk = AndroidProjectConfig.TARGET_SDK_VERSION
+        versionCode = AndroidProjectConfig.VERSION_CODE
+        versionName = AndroidProjectConfig.VERSION_NAME
 
-        testInstrumentationRunner = Config.testInstrumentationRunner
+        testInstrumentationRunner = AndroidProjectConfig.TEST_INSTRUMENTATION_RUNNER
     }
 
     buildTypes {
@@ -30,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = Config.jvmTarget
+        jvmTarget = AndroidProjectConfig.JVM_TARGET
     }
 }
 
